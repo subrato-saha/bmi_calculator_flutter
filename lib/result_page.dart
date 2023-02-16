@@ -54,10 +54,10 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BMI Calculator"),
+        title: const Text("BMI Calculator"),
       ),
       body: Column(children: [
-        Center(
+        const Center(
           heightFactor: 2,
           child: Text(
             "Your Result",
@@ -67,7 +67,7 @@ class ResultPage extends StatelessWidget {
         ),
         Expanded(
             child: Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           width: double.infinity,
           decoration: BoxDecoration(
               color: sPrimaryColor, borderRadius: BorderRadius.circular(10)),

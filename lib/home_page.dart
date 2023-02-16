@@ -45,16 +45,17 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.male,
                                 size: 60,
-                                color: Colors.white,
+                                color: isMale ? buttonColor : Colors.white,
                               ),
                               Text(
                                 "Male",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 30),
+                                    color: isMale ? buttonColor : Colors.white,
+                                    fontSize: 30),
                               )
                             ]),
                       ),
@@ -77,16 +78,17 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(10)),
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.female,
                                 size: 60,
-                                color: Colors.white,
+                                color: !isMale ? buttonColor : Colors.white,
                               ),
                               Text(
                                 "Female",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 30),
+                                    color:
+                                        !isMale ? buttonColor : Colors.white),
                               )
                             ]),
                       ),
@@ -195,6 +197,7 @@ class _HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FloatingActionButton(
+                              heroTag: "weight increse",
                               backgroundColor: incDecBtn,
                               onPressed: () {
                                 setState(() {
@@ -208,6 +211,7 @@ class _HomePageState extends State<HomePage> {
                               width: 10,
                             ),
                             FloatingActionButton(
+                              heroTag: "weight Incese",
                               backgroundColor: incDecBtn,
                               onPressed: () {
                                 setState(() {
@@ -265,6 +269,7 @@ class _HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FloatingActionButton(
+                              heroTag: "age decrese",
                               backgroundColor: incDecBtn,
                               onPressed: () {
                                 setState(() {
@@ -278,6 +283,7 @@ class _HomePageState extends State<HomePage> {
                               width: 10,
                             ),
                             FloatingActionButton(
+                              heroTag: "age increse",
                               backgroundColor: incDecBtn,
                               onPressed: () {
                                 setState(() {

@@ -1,6 +1,5 @@
 import 'package:bmi_calculator/colors.dart';
 import 'package:bmi_calculator/home_page.dart';
-import 'package:bmi_calculator/result_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: bgColor,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
